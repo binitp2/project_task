@@ -67,7 +67,7 @@ In WhatsEase API you can test your API using Adding Some value and check validat
 
 ### Backend (`backend/.env`)
 - `DATABASE_URL`=postgresql+psycopg2://postgres:postgres@db:5432/whats_ease
-- `JWT_SECRET`=change_me
+- `JWT_SECRET`=change_me (.env)
 - `ACCESS_TOKEN_EXPIRE_MINUTES`=1440
 - `ALLOWED_ORIGINS`=http://localhost:5173
 - `LOG_LEVEL`=INFO
@@ -79,6 +79,10 @@ In WhatsEase API you can test your API using Adding Some value and check validat
 ---
 
 ## API Overview
+
+---
+- `WhatsEase API - Swagger UI`=http://localhost:8000/docs#
+---
 
 - Auth
   - POST `/auth/register` — register

@@ -22,7 +22,7 @@ WhatsEase is a full-stack, WhatsApp-like web chat application with real-time mes
 Default users after seeding:
 - alice@example.com / password@123
 - bob@example.com / password@123
-charlie@example.com / password@123
+- charlie@example.com / password@123
 
 ### Backend
 

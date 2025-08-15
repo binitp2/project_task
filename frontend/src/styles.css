@@ -1,0 +1,161 @@
+:root {
+    color-scheme: light dark;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: system-ui, Arial, sans-serif;
+}
+
+.app {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.topbar {
+    display: flex;
+    gap: 12px;
+    padding: 8px 12px;
+    border-bottom: 1px solid #ccc;
+}
+
+.layout {
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    height: calc(100vh - 42px);
+}
+
+.sidebar {
+    border-right: 1px solid #ccc;
+    overflow: auto;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+}
+
+.chat-header {
+    padding: 8px 12px;
+    border-bottom: 1px solid #ccc;
+}
+
+.messages {
+    flex: 1;
+    overflow: auto;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.bubble {
+    max-width: 70%;
+    padding: 8px 12px;
+    border-radius: 12px;
+}
+
+.bubble.me {
+    align-self: flex-end;
+    background: #e1ffc7;
+    color: #000;
+}
+
+.bubble.other {
+    align-self: flex-start;
+    background: #f0f0f0;
+    color: #000;
+}
+
+.composer {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 8px;
+    padding: 8px;
+    border-top: 1px solid #ccc;
+}
+
+.searchbar {
+    padding: 8px;
+    border-bottom: 1px solid #ccc;
+}
+
+.list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.list-item {
+    padding: 10px 12px;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+}
+
+.list-item:focus {
+    outline: 2px solid #2684ff;
+}
+
+@media (max-width: 900px) {
+    .layout {
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar {
+        display: none;
+    }
+}
+
+/* Login page alignment */
+.login {
+	max-width: 420px;
+	margin: 80px 24px; /* left aligned instead of centered */
+	padding: 16px;
+}
+
+.login .form {
+	display: grid;
+	gap: 12px;
+}
+
+.login .field {
+	display: grid;
+	grid-template-columns: 110px 1fr;
+	align-items: center;
+	gap: 10px;
+}
+
+.login .field > span {
+	justify-self: end;
+	font-weight: 600;
+}
+
+.login .field input {
+	width: 100%;
+	padding: 8px;
+}
+
+.login .btn {
+	padding: 8px 14px;
+	cursor: pointer;
+}
+
+.login .error {
+	color: crimson;
+	margin-top: 6px;
+}
+
+.badge {
+	float: right;
+	background: #2563eb;
+	color: white;
+	border-radius: 999px;
+	padding: 2px 8px;
+	font-size: 12px;
+	margin-left: 8px;
+}
